@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:c="http://www.springframework.org/schema/c"
+    xmlns:p="http://www.springframework.org/schema/p" xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <context:component-scan base-package="com.ashu.spring" />
+
+	<context:annotation-config></context:annotation-config>
+
+    <bean id="amit" class="com.ashu.spring.beans.Users">
+    <property name="name" value="Amit"></property>
+    <property name="employee" ref="employee"></property>
+    </bean>
+
+	<bean id="w" class="com.ashu.spring.beans.Welcome"></bean>
+	
+	
+	
+	<bean id="employee" class="com.ashu.spring.beans.Employee"></bean>
+	
+</beans>
